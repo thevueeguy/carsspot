@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from "react";
-import { Table, Row, Col } from "react-bootstrap";
+import { Table, Row, Col, Container } from "react-bootstrap";
 import { UserContext } from "../context/UserContext";
 import Loader from "../Components/Loader";
 
@@ -17,7 +17,7 @@ function BookedCarsList() {
 }, []);
   
   return (
-    <>
+    <Container>
       
       {wait ? <Loader /> : (
         <Row>
@@ -48,7 +48,7 @@ function BookedCarsList() {
         </Row>
       )
       }
-    </>
+    </Container>
   );
 }
 
