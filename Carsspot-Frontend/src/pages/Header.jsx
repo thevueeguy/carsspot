@@ -3,8 +3,6 @@ import { Nav, Navbar, NavDropdown } from "react-bootstrap";
 import { LinkContainer } from 'react-router-bootstrap';
 import Container from 'react-bootstrap/Container';
 import { UserContext } from '../context/UserContext';
-import { ToastContainer } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
 
 const Header = () => {
   const { user, logout } = useContext(UserContext);
@@ -16,7 +14,6 @@ const Header = () => {
     <header style={{ width: "99vw" }}>
       {user ? (
         <Navbar variant="dark" bg="dark" expand="lg">
-                    <ToastContainer />
           <Container fluid>
             <LinkContainer to="/" className=''>
               <Navbar.Brand><b>CARS SPOT</b></Navbar.Brand>

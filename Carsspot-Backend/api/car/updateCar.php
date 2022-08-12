@@ -26,7 +26,7 @@
 
     if($car->updateCar()) {
         echo json_encode(
-            array('message' => 'Car Updated')
+            array('message' => 'Car Updated refresh to see the changes!')
         );
     } else {
         echo json_encode(

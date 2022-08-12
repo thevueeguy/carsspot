@@ -25,7 +25,7 @@
 
     if($car->createCar()) {
         echo json_encode(
-            array('message' => 'Car Created!')
+            array('message' => 'Car Created refresh to see the results!')
         );
     } else {
         echo json_encode(

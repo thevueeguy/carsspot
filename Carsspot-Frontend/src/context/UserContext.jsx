@@ -6,7 +6,7 @@ import 'react-toastify/dist/ReactToastify.css';
 export const UserContext = createContext();
 
 export const Axios = axios.create({
-  baseURL: "http://localhost/carsspot/api/",
+  baseURL: "https://cars-spot.herokuapp.com/api/",
 });
 
 export const UserContextProvider = ({ children }) => {

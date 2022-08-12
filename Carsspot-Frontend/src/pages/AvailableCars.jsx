@@ -7,8 +7,7 @@ import Loader from "../Components/Loader";
 import AddCar from "./AddCar";
 
 function AvailableCars() {
-    const { user } = useContext(UserContext);
-    const { wait, getAllCars, getAvailbleCars } = useContext(UserContext);
+    const { user, wait, getAllCars, getAvailbleCars } = useContext(UserContext);
     const [cars, setCars] = useState([]);
     const [addCar, setAddCar] = useState(false);
     

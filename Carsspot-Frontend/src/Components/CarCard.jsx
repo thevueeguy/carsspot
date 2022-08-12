@@ -62,7 +62,6 @@ const CarCard = ({ car }) => {
             }
             const response = await editCar(JSON.stringify(data));
             toast(response.message);
-            window.location.reload(false);
         }
     }
 

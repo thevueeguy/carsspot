@@ -5,10 +5,11 @@ import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { UserContext } from '../context/UserContext';
 import { images, cars } from '../Components/Images';
+import Loader from '../Components/Loader';
 
 
 function AddBike() {
-    const { addCar } = useContext(UserContext);
+    const { addCar, wait } = useContext(UserContext);
     const [image, setImage] = useState("default")
     const [model, setModel] = useState("car")
     const [number, setNumber] = useState("")
@@ -31,13 +32,13 @@ function AddBike() {
             }
             const response = await addCar(JSON.stringify(data));
             toast(response.message);
-            window.location.reload(false);
         }
     }
 
     return (
         <>
             <Card className="w-25 h-25 m-5 d-flex justify-content-between" style={{ boxSizing: "border", borderRadius: "32px" }}>
+                {wait && <Loader/>}
                 <Form onSubmit={submitHandler}>
                     <Card.Img variant="top" src={"./Images/" + (image).toString() + ".jpg"} style={{ height: "20vh", padding: "0 80px" }} />
                     <Form.Group controlId='image' className='px-4 mt-4'>

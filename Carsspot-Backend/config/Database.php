@@ -1,10 +1,10 @@
 <?php 
     class Database {
         // DB params
-        private $host = "localhost";
-        private $db_name = "cars_project";
-        private $username = "root";
-        private $password = "";
+        private $host = "sql6.freesqldatabase.com";
+        private $db_name = "sql6512306";
+        private $username = "sql6512306";
+        private $password = "Ya1c99w8PJ";
         private $conn;
 
         public function connect() {

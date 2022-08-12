@@ -18,7 +18,6 @@ function BookedCarsList() {
   
   return (
     <Container>
-      
       {wait ? <Loader /> : (
         <Row>
           <Col>
@@ -27,8 +26,8 @@ function BookedCarsList() {
           <Table striped bordered hover responsive className="table-sm">
             <thead>
               <tr>
-                <th>Booked Vehicle Model</th>
-                <th>Booked Vehicle Number</th>
+                <th>Booked Vehicle id</th>
+                <th>Booked by User </th>
                 <th>Start Date</th>
                 <th>No. of Days</th>
               </tr>

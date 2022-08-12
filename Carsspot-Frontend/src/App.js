@@ -1,5 +1,6 @@
-import { useContext } from "react";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import Home from "./pages/Home";
 import Modal from "react-modal/lib/components/Modal";
 import Login from "./pages/Login";
@@ -8,6 +9,7 @@ import Footer from "./pages/Footer";
 import SignUp from "./pages/SignUp";
 import AvailableCars from "./pages/AvailableCars";
 import BookedCarsList from "./pages/BookedCarsList";
+
 
 Modal.setAppElement("#root");
 
@@ -25,6 +27,7 @@ function App() {
       >          
           <div>
           <Header />
+          <ToastContainer />
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/login" element={<Login />} />
